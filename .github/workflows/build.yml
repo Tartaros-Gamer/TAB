@@ -4,7 +4,7 @@ on:
     branches: [ actions ]
 jobs:
   build:
-    name: Build
+    name: Build Jar
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: TAB
-          path: ./jar/*.jar
+          path: ./jar/target/*.jar
